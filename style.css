@@ -1,0 +1,134 @@
+html {
+    background: #778489;
+ /*   display: flex;*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Marvel', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    text-align: center;
+    margin: 5%;
+}
+
+/* menu start*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+a {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none; /*deletes underline on links*/
+    background: black;
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+a:hover {
+    
+    background: #be1010; /*these hovering colours are called 'rollovers'*/
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto; /*none top and bottom auto on left and right*/
+    padding: 0 3em 1.5em; /*top right bottom , none on left*/
+}
+
+.navigation ul {
+    
+    border: 1px solid white;
+    list-style: none; /*deletes bullet points from the menu list*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+.navigation li {
+    
+    flex: 3;
+    
+}
+
+.navigation .user {
+    
+    flex: 1;
+}
+
+/* next section for devices up to 1000px, tablets*/
+@media all and (max-width:1000px) /*no need to link to a media query code within index specifically as there is no extraordinary code like images, we are trying to affect the size of the page so do not have to link to something within index */  {
+
+
+.navigation ul {
+    
+    flex-wrap: wrap;
+}
+    
+    .navigation li {
+        
+        flex: 1 1 50%; /*1 how much it can grow,1  how much it can shrink, 50% my prefered basis for flex. (grow, shrink, basis*/
+    }
+    
+    .navigation .user {
+        
+        flex: 1 1 33.33%;
+    }
+
+
+} /*end of tablet media query 1000px*/
+
+@media all and (max-width:600px) {
+    
+    .navigation li {
+        
+        flex-basis: 100%;
+    }    
+    
+    .navigation .user {
+        
+        flex-basis: 50%;
+    }
+    
+    
+
+} /*end media query 600px*/
+
+/*end of menu*/
+
+.video {
+    max-height: 90%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow {
+    max-height: 90%;
+    max-width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    text-align: center;
+    margin: 5%;
+    font-size: 30px;
+}
+
+
